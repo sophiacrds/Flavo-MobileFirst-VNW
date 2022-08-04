@@ -92,6 +92,7 @@ export const Info = styled.div`
 			font-size: var(--pSize);
 			margin: 5px 0 20px;
 			font-family: var(--pFont);
+			font-weight: 500;
 		}
 	}
 `;
