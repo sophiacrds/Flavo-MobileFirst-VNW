@@ -74,14 +74,14 @@ export default class App extends React.Component {
 			<>
 				<GlobalStyle />
 				<Header>
-					<img src={menuIcon} alt="" />
+					<img src={menuIcon} alt="Menu icon" title="Menu" />
 					<h1>flavo</h1>
-					<img src={bagIcon} alt="" />
+					<img src={bagIcon} alt="Bag icon" title="Bag" />
 				</Header>
 				<Page>
 					{this.state.products.map((i, index) => (
 						<section key={index}>
-							<Product src={i.img} alt="" />
+							<Product src={i.img} alt="Product image" />
 							<Label>
 								<h2>{i.name}</h2>
 								<p>${i.price}</p>
@@ -94,7 +94,11 @@ export default class App extends React.Component {
 							</Info>
 							<Sizes>
 								<div>
-									<input type="checkbox" name="size" id="" />
+									<input
+										type="checkbox"
+										name="size"
+										id="size"
+									/>
 									<label
 										htmlFor="size"
 										onClick={this.select}
@@ -102,7 +106,11 @@ export default class App extends React.Component {
 									<p>BAG (75g)</p>
 								</div>
 								<div>
-									<input type="checkbox" name="sizer" id="" />
+									<input
+										type="checkbox"
+										name="sizer"
+										id="size"
+									/>
 									<label
 										htmlFor="size"
 										onClick={this.select}

@@ -12,9 +12,14 @@ export const GlobalStyle = createGlobalStyle`
         --pFont: 'Bellota Text';
         --bgYellow: #F0B542;
         --secColor: #FDECC1;
+        --titleSize: 35px;
+        --priceSize: 30px;
+        --subTitle: 25px;
+        --pSize: 20px;
+        --roundBoxH: 45px
     }
     body{
-        background: var(--bgYellow);
+        background-color: var(--bgYellow);
     }
 `;
 export const Page = styled.main`
@@ -34,7 +39,7 @@ export const Header = styled.header`
 		justify-content: space-between;
 		align-items: center;
 		width: calc(100% - 40px);
-		height: 50px;
+		height: var(--roundBoxH);
 		margin: 20px 20px 0px;
 		border-radius: 50px;
 		h1 {
@@ -52,7 +57,7 @@ export const Product = styled.img`
 	display: none;
 	@media (max-width: 425px) {
 		display: block;
-		width: 80%;
+		width: 75%;
 		margin: 30px auto;
 	}
 `;
@@ -64,11 +69,11 @@ export const Label = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		h2 {
-			font-size: 50px;
+			font-size: var(--titleSize);
 			font-family: var(--titleFont);
 		}
 		p {
-			font-size: 45px;
+			font-size: var(--priceSize);
 			font-family: var(--pFont);
 		}
 	}
@@ -77,15 +82,15 @@ export const Info = styled.div`
 	display: none;
 	@media (max-width: 425px) {
 		display: block;
-		margin: 30px 0 40px;
+		margin: 15px 0 30px;
 		h3 {
-			font-size: 35px;
+			font-size: var(--subTitle);
 			margin: 0;
 			font-family: var(--titleFont);
 		}
 		p {
-			font-size: 25px;
-			margin: 10px 0 25px;
+			font-size: var(--pSize);
+			margin: 5px 0 20px;
 			font-family: var(--pFont);
 		}
 	}
@@ -104,15 +109,15 @@ export const Sizes = styled.div`
 			justify-content: space-between;
 		}
 		p {
-			font-size: 20px;
+			font-size: var(--pSize);
 			font-family: var(--pFont);
 		}
 		input {
 			opacity: 0;
 		}
 		label {
-			width: 20px;
-			height: 20px;
+			width: 15px;
+			height: 15px;
 			border-radius: 15px;
 			border: 1px solid black;
 			position: relative;
@@ -130,7 +135,7 @@ export const BtnBox = styled.div`
 		justify-content: space-between;
 		align-items: center;
 		width: 100%;
-		height: 50px;
+		height: var(--roundBoxH);
 		margin: 30px auto 50px 0;
 		border: 2px solid black;
 		border-radius: 50px;
@@ -157,7 +162,7 @@ export const Cart = styled.button`
 		justify-content: center;
 		align-items: center;
 		width: calc(100% - 40px);
-		height: 50px;
+		height: var(--roundBoxH);
 		margin: 0 auto;
 		border-radius: 50px;
 		font-size: 20px;
