@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/Flavo-MobileFirst-VNW/static/js/main.63323225.js",
+    "main.js": "/Flavo-MobileFirst-VNW/static/js/main.27ed49f8.js",
     "static/media/intensity.png": "/Flavo-MobileFirst-VNW/static/media/intensity.3aa8be579031d53f114a.png",
     "static/media/cosiness.png": "/Flavo-MobileFirst-VNW/static/media/cosiness.09062fb8e35e8c338799.png",
     "static/media/passion.png": "/Flavo-MobileFirst-VNW/static/media/passion.3ada9c06d6cd4a8cf564.png",
     "index.html": "/Flavo-MobileFirst-VNW/index.html",
-    "main.63323225.js.map": "/Flavo-MobileFirst-VNW/static/js/main.63323225.js.map"
+    "main.27ed49f8.js.map": "/Flavo-MobileFirst-VNW/static/js/main.27ed49f8.js.map"
   },
   "entrypoints": [
-    "static/js/main.63323225.js"
+    "static/js/main.27ed49f8.js"
   ]
 }
