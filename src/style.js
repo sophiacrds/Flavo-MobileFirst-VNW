@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
 		margin: 0px;
 		padding: 0;
 		box-sizing: border-box;
-        color: #000
+        color: #000 // prevent IOS buttons default mode (blue text)
 	}
     :root{
         --titleFont: 'Anybody';
