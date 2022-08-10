@@ -110,21 +110,33 @@ export const Sizes = styled.div`
 			align-items: center;
 			justify-content: space-between;
 		}
+		input {
+			display: none;
+		}
 		p {
 			font-size: var(--pSize);
 			font-family: var(--pFont);
 		}
-		input {
-			opacity: 0;
+		input[type="checkbox"]:checked + label span {
+			background: black;
 		}
-		label {
+		input[type="checkbox"]:checked + label p {
+			font-size: 22px;
+		}
+		span {
 			width: 15px;
 			height: 15px;
 			border-radius: 15px;
 			border: 1px solid black;
 			position: relative;
-			left: -14px;
 			background: transparent;
+		}
+		label {
+			height: 1.1rem;
+			width: 130px;
+			display: flex;
+			align-items: center;
+			gap: 5px;
 			cursor: pointer;
 		}
 	}

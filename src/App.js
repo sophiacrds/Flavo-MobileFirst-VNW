@@ -25,25 +25,30 @@ export default class App extends React.Component {
 				name: "PASSION",
 				price: 15,
 				ingredients: "Chili, oregano, safran, paprika",
-				digest: "This one will add a little savoury flavour to any food and turn any meal to a culinary masterpiece",
+				digest:
+					"This one will add a little savoury flavour to any food and turn any meal to a culinary masterpiece",
+				id: 1,
 			},
 			{
 				img: intensity,
 				name: "INTENSITY",
 				price: 20,
 				ingredients: "Gorgonzola cheese, tomato, parsley",
-				digest: "This one was made especially for fish, offering a huge complexity of flavors with unique acidity and saltness.",
+				digest:
+					"This one was made especially for fish, offering a huge complexity of flavors with unique acidity and saltness.",
+				id: 2,
 			},
 			{
 				img: cosiness,
 				name: "COSINESS",
 				price: 23,
 				ingredients: "Tamara, burnt sugar, fennel",
-				digest: "With the sweetest flavor, this blend is perfect for citrus combinations. Salted caramel notes stand out.",
+				digest:
+					"With the sweetest flavor, this blend is perfect for citrus combinations. Salted caramel notes stand out.",
+				id: 3,
 			},
 		],
 		num: 0,
-		btn: false,
 	};
 
 	add = () => {
@@ -51,22 +56,7 @@ export default class App extends React.Component {
 	};
 
 	sub = () => {
-		return this.state.num
-			? this.setState({ num: this.state.num - 1 })
-			: null;
-	};
-
-	select = (e) => {
-		const buttonLabel = e.target;
-		const btn = this.state.btn;
-
-		if (!btn) {
-			this.setState({ btn: true });
-			buttonLabel.style.background = "black";
-		} else {
-			this.setState({ btn: false });
-			buttonLabel.style.background = "transparent";
-		}
+		return this.state.num ? this.setState({ num: this.state.num - 1 }) : null;
 	};
 
 	render() {
@@ -79,8 +69,8 @@ export default class App extends React.Component {
 					<img src={bagIcon} alt="Bag icon" title="Bag" />
 				</Header>
 				<Page>
-					{this.state.products.map((i, index) => (
-						<section key={index}>
+					{this.state.products.map((i) => (
+						<section key={i.id}>
 							<Product src={i.img} alt="Product image" />
 							<Label>
 								<h2>{i.name}</h2>
@@ -97,31 +87,29 @@ export default class App extends React.Component {
 									<input
 										type="checkbox"
 										name="size"
-										id="size"
+										id={`bag-${i.id}`}
 									/>
-									<label
-										htmlFor="size"
-										onClick={this.select}
-									></label>
-									<p>BAG (75g)</p>
+									<label htmlFor={`bag-${i.id}`}>
+										<span></span>
+										<p>BAG (75g)</p>
+									</label>
 								</div>
 								<div>
 									<input
 										type="checkbox"
-										name="sizer"
-										id="size"
+										name="size"
+										id={`jar-${i.id}`}
 									/>
-									<label
-										htmlFor="size"
-										onClick={this.select}
-									></label>
-									<p>JAR (150g)</p>
+									<label htmlFor={`jar-${i.id}`}>
+										<span></span>
+										<p>JAR (150g)</p>
+									</label>
 								</div>
 							</Sizes>
 							<BtnBox>
-								<button onClick={this.sub}>-</button>
+								<button onClick={() => this.sub()}>-</button>
 								<p>{this.state.num}</p>
-								<button onClick={this.add}>+</button>
+								<button onClick={() => this.add()}>+</button>
 							</BtnBox>
 							<Division />
 						</section>
